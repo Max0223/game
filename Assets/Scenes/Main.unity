@@ -303,7 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a46477e35928401448d9a94ec2f1d092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tank: 30
 --- !u!50 &560190063
 Rigidbody2D:
   serializedVersion: 4
@@ -337,7 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc815208fa382a547932312c282fd81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  power: 15
+  tank: 150
 --- !u!1 &1293322190
 GameObject:
   m_ObjectHideFlags: 0
