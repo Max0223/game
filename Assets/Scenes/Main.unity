@@ -336,8 +336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc815208fa382a547932312c282fd81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 15
-  tank: 150
+  power: 100
+  fuelSpend: 2
+  GasTank: {fileID: 560190062}
 --- !u!1 &1293322190
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +350,8 @@ GameObject:
   - component: {fileID: 1293322192}
   - component: {fileID: 1293322191}
   - component: {fileID: 1293322194}
+  - component: {fileID: 1293322195}
+  - component: {fileID: 1293322193}
   m_Layer: 0
   m_Name: car2
   m_TagString: Untagged
@@ -421,6 +424,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293322193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293322190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201f6d44464df4f45968e9a36c1a077c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1293322194
 Rigidbody2D:
   serializedVersion: 4
@@ -442,3 +457,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1293322195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293322190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8475cb17724231e44b3170f263b3bd85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  power: 50
+  fuelSpend: 1
+  clickCheck: 0
+  Battery: {fileID: 1293322193}

@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GasEngine : MonoBehaviour
+public class ElectricalEngine : MonoBehaviour
 {
-    public float power = 100f;
-    public float fuelSpend = 2;
+    public float power = 50f;
+    public float fuelSpend = 1;
 
-    private bool clickCheck = false;
-    public GasTank GasTank;
+    public bool clickCheck = false;
+    public Battery Battery;
     private Rigidbody2D rb;
 
     void Start()
@@ -28,9 +28,9 @@ public class GasEngine : MonoBehaviour
 
     IEnumerator Spending()
     {
-        while (GasTank.HasFuel())
+        while (Battery.HasFuel())
         {
-            GasTank.Spend(fuelSpend);
+            Battery.Spend(fuelSpend);
             yield return new WaitForFixedUpdate();
         }
         rb.velocity = new Vector2(0, rb.velocity.y);

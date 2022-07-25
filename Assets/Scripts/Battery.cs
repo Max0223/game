@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GasTank : MonoBehaviour
+public class Battery : MonoBehaviour
 {
-    private float tank = 700f;
+    private float tank = 1000f;
 
     public bool HasFuel() => tank > 0;
 
