@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GasEngine : MonoBehaviour
@@ -9,30 +8,32 @@ public class GasEngine : MonoBehaviour
 
     private bool clickCheck = false;
     public GasTank GasTank;
-    private Rigidbody2D rb;
+    private new Rigidbody2D rigidbody;
+    private Transform _transform;
 
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        _transform = GetComponent<Transform>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) & clickCheck == false)
+        if (clickCheck == false && Input.GetKeyUp(KeyCode.Space))
         {
-            clickCheck = !clickCheck;
-            StartCoroutine("Spending");
-            rb.AddForce(transform.right * power);
+            clickCheck = true;
+            StartCoroutine(Spending());
+            rigidbody.AddForce(_transform.right * power);
         }
     }
 
-    IEnumerator Spending()
+    private IEnumerator Spending()
     {
         while (GasTank.HasFuel())
         {
             GasTank.Spend(fuelSpend);
             yield return new WaitForFixedUpdate();
         }
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
     }
 }

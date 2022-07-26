@@ -1,38 +1,39 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ElectricalEngine : MonoBehaviour
 {
     public float power = 50f;
-    public float fuelSpend = 1;
+    public float energySpend = 1;
 
-    public bool clickCheck = false;
+    private bool clickCheck = false;
     public Battery Battery;
-    private Rigidbody2D rb;
+    private new Rigidbody2D rigidbody;
+    private Transform _transform;
 
-    void Start()
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        _transform = GetComponent<Transform>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space) & clickCheck == false)
+        if (clickCheck == false && Input.GetKeyUp(KeyCode.Space))
         {
-            clickCheck = !clickCheck;
-            StartCoroutine("Spending");
-            rb.AddForce(transform.right * power);
+            clickCheck = true;
+            StartCoroutine(Spending());
+            rigidbody.AddForce(_transform.right * power);
         }
     }
 
-    IEnumerator Spending()
+    private IEnumerator Spending()
     {
-        while (Battery.HasFuel())
+        while (Battery.HasEnergy())
         {
-            Battery.Spend(fuelSpend);
+            Battery.Spend(energySpend);
             yield return new WaitForFixedUpdate();
         }
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
     }
 }
