@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 560190061}
   - component: {fileID: 560190060}
   - component: {fileID: 560190063}
+  - component: {fileID: 560190065}
   - component: {fileID: 560190064}
   - component: {fileID: 560190062}
   m_Layer: 0
@@ -336,8 +337,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc815208fa382a547932312c282fd81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 100
-  fuelSpend: 2
+--- !u!114 &560190065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560190059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34f8754501f6024ca7661a74c902a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GasEngine: {fileID: 560190064}
   GasTank: {fileID: 560190062}
 --- !u!1 &1293322190
 GameObject:
@@ -350,6 +362,7 @@ GameObject:
   - component: {fileID: 1293322192}
   - component: {fileID: 1293322191}
   - component: {fileID: 1293322194}
+  - component: {fileID: 1293322196}
   - component: {fileID: 1293322195}
   - component: {fileID: 1293322193}
   m_Layer: 0
@@ -469,7 +482,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8475cb17724231e44b3170f263b3bd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 50
-  fuelSpend: 1
-  clickCheck: 0
+--- !u!114 &1293322196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293322190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47e996e43978702439d6c3c7219efde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElectricalEngine: {fileID: 1293322195}
   Battery: {fileID: 1293322193}

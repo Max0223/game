@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GasTank : MonoBehaviour
 {
-    private float tank = 700f;
+    [SerializeField] private float tank = 700f;
 
     public bool HasFuel() => tank > 0;
 
