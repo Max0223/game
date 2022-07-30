@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public class ElectricalEngine : MonoBehaviour
+public class ElectricalEngine : Engine
 {
-    public float Power { get; private set; } = 50f;
-    public float EnergySpend { get; private set; } = 1f;
+    public Battery Battery;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float energySpend = 1f;
+
+    public float Speed => speed;
+    public float EnergySpend => energySpend;
 }

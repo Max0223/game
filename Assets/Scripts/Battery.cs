@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    [SerializeField] private float charge = 1000f;
+    [SerializeField] private float charge = 200f;
 
     public bool HasEnergy() => charge > 0;
 

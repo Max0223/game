@@ -1,7 +1,15 @@
 using UnityEngine;
 
-public class GasEngine : MonoBehaviour
+public class GasEngine : Engine
 {
-    public float Power { get; private set; } = 100f;
-    public float FuelSpend { get; private set; } = 2f;
+    public GasTank GasTank;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float fuelSpend = 2f;
+
+    private void Update()
+    {
+        GetSpeed(speed);
+        GetFuelSpend(fuelSpend);
+    }
+
 }
