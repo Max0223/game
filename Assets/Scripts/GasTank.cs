@@ -4,7 +4,6 @@ public class GasTank : MonoBehaviour
 {
     [SerializeField] private float tank = 100f;
 
-    public bool HasFuel() => tank > 0;
-
-    public void Spend(float cost) => tank -= cost;
+    public float Tank => tank;
+    public float Spend(float cost) => tank -= cost;
 }

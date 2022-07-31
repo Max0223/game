@@ -2,14 +2,11 @@ using UnityEngine;
 
 public class GasEngine : Engine
 {
-    public GasTank GasTank;
+    [SerializeField] private GasTank GasTank;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float fuelSpend = 2f;
 
-    private void Update()
-    {
-        GetSpeed(speed);
-        GetFuelSpend(fuelSpend);
-    }
-
+    public override float GetSpeed => speed;
+    public override float Spend() => GasTank.Spend(fuelSpend);
+    public override bool TryMove() => GasTank.Tank > 0;
 }

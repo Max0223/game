@@ -24,10 +24,10 @@ public class Car : MonoBehaviour
 
     private IEnumerator Moving()
     {
-        while (Engine.HasFuel())
+        while (Engine.TryMove())
         {
-            _transform.Translate(Engine.Speed * Time.deltaTime, 0, 0);
-            Engine.Spend(Engine.FuelSpend);
+            _transform.Translate(Engine.GetSpeed * Time.deltaTime, 0, 0);
+            Engine.Spend();
             yield return new WaitForFixedUpdate();
         }
         _transform.Translate(0, 0, 0);

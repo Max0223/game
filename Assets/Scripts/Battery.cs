@@ -4,7 +4,6 @@ public class Battery : MonoBehaviour
 {
     [SerializeField] private float charge = 200f;
 
-    public bool HasEnergy() => charge > 0;
-
-    public void Spend(float cost) => charge -= cost;
+    public float Charge => charge;
+    public float Spend(float cost) => charge -= cost;
 }

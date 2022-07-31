@@ -519,8 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34f8754501f6024ca7661a74c902a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GasEngine: {fileID: 560190064}
-  ElectricalEngine: {fileID: 0}
+  Engine: {fileID: 560190064}
 --- !u!1 &616609748
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +695,7 @@ GameObject:
   - component: {fileID: 1293322192}
   - component: {fileID: 1293322191}
   - component: {fileID: 1293322194}
+  - component: {fileID: 1293322196}
   - component: {fileID: 1293322195}
   - component: {fileID: 1293322193}
   m_Layer: 0
@@ -821,3 +821,16 @@ MonoBehaviour:
   Battery: {fileID: 1293322193}
   speed: 5
   energySpend: 1
+--- !u!114 &1293322196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293322190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c34f8754501f6024ca7661a74c902a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Engine: {fileID: 1293322195}
