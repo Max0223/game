@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    [SerializeField] private Engine Engine;
+    [SerializeField] private Engine _engine;
 
     private bool clickCheck = false;
     private Transform _transform;
@@ -24,12 +24,10 @@ public class Car : MonoBehaviour
 
     private IEnumerator Moving()
     {
-        while (Engine.TryMove())
+        while (_engine.TryMove())
         {
-            _transform.Translate(Engine.GetSpeed * Time.deltaTime, 0, 0);
-            Engine.Spend();
+            _transform.Translate(_engine.Speed * Time.deltaTime, 0, 0);
             yield return new WaitForFixedUpdate();
         }
-        _transform.Translate(0, 0, 0);
     }
 }

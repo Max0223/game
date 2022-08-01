@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc815208fa382a547932312c282fd81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GasTank: {fileID: 560190062}
+  _gasTank: {fileID: 560190062}
   speed: 10
   fuelSpend: 2
 --- !u!114 &560190065
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34f8754501f6024ca7661a74c902a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Engine: {fileID: 560190064}
+  _engine: {fileID: 560190064}
 --- !u!1 &616609748
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8475cb17724231e44b3170f263b3bd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Battery: {fileID: 1293322193}
+  _battery: {fileID: 1293322193}
   speed: 5
   energySpend: 1
 --- !u!114 &1293322196
@@ -833,4 +833,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c34f8754501f6024ca7661a74c902a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Engine: {fileID: 1293322195}
+  _engine: {fileID: 1293322195}
