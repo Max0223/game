@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8395545227099141632}
   - component: {fileID: 8395545227099141635}
-  - component: {fileID: 8395545227099141646}
-  - component: {fileID: 8395545227099141633}
+  - component: {fileID: -6833727635257872588}
+  - component: {fileID: -7650718869963591761}
   m_Layer: 0
   m_Name: ElectricalEngine
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8395545227099141646
+--- !u!114 &-6833727635257872588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8475cb17724231e44b3170f263b3bd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _battery: {fileID: 8395545227099141633}
+  _battery: {fileID: -7650718869963591761}
   _speed: 5
   _energySpend: 1
---- !u!114 &8395545227099141633
+--- !u!114 &-7650718869963591761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

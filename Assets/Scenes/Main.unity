@@ -218,8 +218,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63dd18871f84e2a439df5ec6d619574b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gasCar: {fileID: 5599029537819743621, guid: 6bb2d532a0c3b1247a8036cf68127194, type: 3}
-  _gasEngine: {fileID: 5742922155558154059, guid: e51869140e1095f479cb385760c26f01, type: 3}
+  _car: {fileID: -2530345842954159189, guid: 6bb2d532a0c3b1247a8036cf68127194, type: 3}
+  _engine: {fileID: 7720805972300280447, guid: e51869140e1095f479cb385760c26f01, type: 3}
+  _spawnPoint: {fileID: 1046669669}
+--- !u!1 &466085544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466085545}
+  m_Layer: 0
+  m_Name: SpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &466085545
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466085544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +333,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1046669668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1046669669}
+  m_Layer: 0
+  m_Name: SpawnPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1046669669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046669668}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509023304
 GameObject:
@@ -395,8 +456,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509023304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04fdf08c06099d408df7fd7146181f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 63dd18871f84e2a439df5ec6d619574b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _electricalCar: {fileID: 5599029537819743621, guid: 6bb2d532a0c3b1247a8036cf68127194, type: 3}
-  _electricalEngine: {fileID: 8395545227099141632, guid: 71fba340e133a884a8b3d8405707bac8, type: 3}
+  _car: {fileID: -2530345842954159189, guid: 6bb2d532a0c3b1247a8036cf68127194, type: 3}
+  _engine: {fileID: -6833727635257872588, guid: 71fba340e133a884a8b3d8405707bac8, type: 3}
+  _spawnPoint: {fileID: 466085545}

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5742922155558154059}
   - component: {fileID: 5742922155558154058}
-  - component: {fileID: 5742922155558154069}
-  - component: {fileID: 5742922155558154068}
+  - component: {fileID: 7720805972300280447}
+  - component: {fileID: 7897034823063424185}
   m_Layer: 0
   m_Name: GasEngine
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5742922155558154069
+--- !u!114 &7720805972300280447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc815208fa382a547932312c282fd81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gasTank: {fileID: 5742922155558154068}
+  _gasTank: {fileID: 7897034823063424185}
   _speed: 10
   _fuelSpend: 2
---- !u!114 &5742922155558154068
+--- !u!114 &7897034823063424185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
