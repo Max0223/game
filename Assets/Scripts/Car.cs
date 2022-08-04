@@ -5,9 +5,11 @@ public class Car : MonoBehaviour
 {
     [SerializeField] private Engine _engine;
 
-    private bool clickCheck = false;
+    private bool _clickCheck = false;
     private Transform _transform;
 
+    public void Construct(Engine engine) => _engine = engine;
+    
     private void Awake()
     {
         _transform = GetComponent<Transform>();
@@ -15,9 +17,9 @@ public class Car : MonoBehaviour
 
     private void Update()
     {
-        if (clickCheck == false && Input.GetKeyUp(KeyCode.Space))
+        if (_clickCheck == false && Input.GetKeyUp(KeyCode.Space))
         {
-            clickCheck = true;
+            _clickCheck = true;
             StartCoroutine(Moving());
         }
     }

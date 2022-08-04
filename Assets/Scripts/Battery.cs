@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Battery : MonoBehaviour
 {
-    [SerializeField] private float charge = 200f;
+    [SerializeField] private float _charge = 200f;
 
-    public float Charge => charge;
-    public float Spend(float cost) => charge -= cost;
+    public float Charge => _charge;
+    
+    public float Spend(float cost) => _charge -= cost;
 }
