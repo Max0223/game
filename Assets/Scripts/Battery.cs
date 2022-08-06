@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Battery : MonoBehaviour
+public class Battery
 {
     [SerializeField] private float _charge = 200f;
 

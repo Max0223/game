@@ -1,6 +1,5 @@
-using UnityEngine;
 
-public abstract class Engine : MonoBehaviour
+public abstract class Engine
 {
     public abstract float Speed { get; }
     

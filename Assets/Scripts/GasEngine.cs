@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class GasEngine : Engine
 {
-    [SerializeField] private GasTank _gasTank;
-    [SerializeField] private float _speed = 10f;
-    [SerializeField] private float _fuelSpend = 2f;
+    private float _speed = 10f;
+    private float _fuelSpend = 2f;
+    private GasTank _gasTank = new GasTank();
 
     public override float Speed => _speed;
     

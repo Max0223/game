@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GasTank : MonoBehaviour
+public class GasTank
 {
     [SerializeField] private float _tank = 100f;
 

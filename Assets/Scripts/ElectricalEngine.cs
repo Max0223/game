@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ElectricalEngine : Engine
 {
-    [SerializeField] private Battery _battery;
-    [SerializeField] private float _speed = 5f;
-    [SerializeField] private float _energySpend = 1f;
+    private float _speed = 5f;
+    private float _energySpend = 1f;
+    private Battery _battery = new Battery();
 
     public override float Speed => _speed;
     
