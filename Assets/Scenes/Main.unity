@@ -152,6 +152,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -202,6 +203,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -219,8 +221,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _car: {fileID: -2530345842954159189, guid: 6bb2d532a0c3b1247a8036cf68127194, type: 3}
-  _engine: {fileID: 7720805972300280447, guid: e51869140e1095f479cb385760c26f01, type: 3}
   _spawnPoint: {fileID: 1046669669}
+  _cars: 0
+  _gasEngineConfig: {fileID: 11400000, guid: cd73d4f1e2867fd498d3eb0ae1d57fff, type: 2}
+  _electricalEngineConfig: {fileID: 0}
+  _gasTankConfig: {fileID: 11400000, guid: ec5ad0739ebf82243b3e0005da1f2065, type: 2}
+  _batteryConfig: {fileID: 0}
 --- !u!1 &466085544
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +253,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -330,6 +337,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -360,6 +368,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -393,6 +402,7 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -443,6 +453,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -460,5 +471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _car: {fileID: -2530345842954159189, guid: 6bb2d532a0c3b1247a8036cf68127194, type: 3}
-  _engine: {fileID: -6833727635257872588, guid: 71fba340e133a884a8b3d8405707bac8, type: 3}
   _spawnPoint: {fileID: 466085545}
+  _cars: 1
+  _gasEngineConfig: {fileID: 0}
+  _electricalEngineConfig: {fileID: 11400000, guid: d09cdb8901d07c74ab91db0e051bb7fb, type: 2}
+  _gasTankConfig: {fileID: 0}
+  _batteryConfig: {fileID: 11400000, guid: 21b2b4ed5f3d84a49842d4184abe8de8, type: 2}

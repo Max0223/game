@@ -1,10 +1,13 @@
-using UnityEngine;
-
 public class GasEngine : Engine
 {
     private float _speed = 10f;
     private float _fuelSpend = 2f;
-    private GasTank _gasTank = new GasTank();
+    private GasTank _gasTank;
+
+    public GasEngine(GasTank gasTank, float speed) 
+    {
+        _speed = speed;    
+    }
 
     public override float Speed => _speed;
     

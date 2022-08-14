@@ -1,4 +1,3 @@
-
 public abstract class Engine
 {
     public abstract float Speed { get; }
