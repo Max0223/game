@@ -2,11 +2,12 @@ public class ElectricalEngine : Engine
 {
     private float _speed = 5f;
     private float _energySpend = 1f;
-    private Battery _battery = new Battery();
+    private Battery _battery;
 
-    public ElectricalEngine(Battery battery, float speed) 
+    public ElectricalEngine(Battery battery, ElectricalEngineConfig electricalEngineConfig) 
     {
-        _speed = speed;
+        _battery = battery;
+        _speed = electricalEngineConfig.speed;
     }
 
     public override float Speed => _speed;

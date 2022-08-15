@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37692e518a46bae4dad82d1d8725efa9, type: 3}
   m_Name: GasTankConfig
   m_EditorClassIdentifier: 
-  tank: 0
+  tank: 100

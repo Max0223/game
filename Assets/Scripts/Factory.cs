@@ -5,6 +5,7 @@ public class Factory : MonoBehaviour
     [SerializeField] private Car _car;
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private Cars _cars;
+    [Header("Configs")]
     [SerializeField] private GasEngineConfig _gasEngineConfig;
     [SerializeField] private ElectricalEngineConfig _electricalEngineConfig;
     [SerializeField] private GasTankConfig _gasTankConfig;
@@ -16,14 +17,14 @@ public class Factory : MonoBehaviour
 
         if (_cars == Cars.GasCar)
         {
-            var gasTank = new GasTank(_gasTankConfig.tank);
-            Engine gasEngine = new GasEngine(gasTank, _gasEngineConfig._speed);
+            var gasTank = new GasTank(_gasTankConfig);
+            Engine gasEngine = new GasEngine(gasTank, _gasEngineConfig);
             car.Construct(gasEngine);
         }
         else if (_cars == Cars.ElectricalCar)
         {
-            var battery = new Battery();
-            Engine electricalEngine = new ElectricalEngine(battery, _electricalEngineConfig._speed);
+            var battery = new Battery(_batteryConfig);
+            Engine electricalEngine = new ElectricalEngine(battery, _electricalEngineConfig);
             car.Construct(electricalEngine);
         }
     }

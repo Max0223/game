@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee025fad12a4ad469ab46e35bede88b, type: 3}
   m_Name: ElectricalEngineConfig
   m_EditorClassIdentifier: 
-  _speed: 5
+  speed: 5

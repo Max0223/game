@@ -4,9 +4,9 @@ public class GasTank
 {
     [SerializeField] private float _tank = 100f;
 
-    public GasTank(float tank)
+    public GasTank(GasTankConfig gasTankConfig) 
     {
-        _tank = tank;
+        _tank = gasTankConfig.tank;
     }
     
     public float Tank => _tank;

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f6389cce6dc1840bdfae68b865a223, type: 3}
   m_Name: BatteryConfig
   m_EditorClassIdentifier: 
-  charge: 0
+  charge: 200

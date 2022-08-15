@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a492a467b31af0d4d96ece5ea8c73a48, type: 3}
   m_Name: GasEngineConfig
   m_EditorClassIdentifier: 
-  _speed: 10
+  speed: 10

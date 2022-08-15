@@ -4,9 +4,10 @@ public class GasEngine : Engine
     private float _fuelSpend = 2f;
     private GasTank _gasTank;
 
-    public GasEngine(GasTank gasTank, float speed) 
+    public GasEngine(GasTank gasTank, GasEngineConfig gasEngineConfig) 
     {
-        _speed = speed;    
+        _gasTank = gasTank;
+        _speed = gasEngineConfig.speed;
     }
 
     public override float Speed => _speed;
