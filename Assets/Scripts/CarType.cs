@@ -1,4 +1,4 @@
-public enum Cars
+public enum CarType
 {
     GasCar,
     ElectricalCar
