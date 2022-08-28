@@ -9,13 +9,13 @@ public class Controller : MonoBehaviour
     [SerializeField] private Factory _electricalCarFactory;
     private Car _gasCar;
     private Car _electricalCar;
-    private int count;
+    private int _count;
 
     private void Awake()
     {
         _gasCar = _gasCarFactory.Create();
         _electricalCar = _electricalCarFactory.Create();
-        Car.HasFuel += EndGameWindow;
+        _gasCar.HasFuel += EndGameWindow;
     }
 
     private void Update()
@@ -30,8 +30,8 @@ public class Controller : MonoBehaviour
 
     private void EndGameWindow()
     {
-        count++;
-        if (count >= 2)
+        _count++;
+        if (_count >= 2)
         {
             SceneManager.LoadScene("EndGame");
         }

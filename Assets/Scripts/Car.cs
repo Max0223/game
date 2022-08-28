@@ -7,7 +7,7 @@ public class Car : MonoBehaviour
     private Engine _engine;
     private Transform _transform;
     public delegate void EndGame();
-    public static event EndGame HasFuel;
+    public event EndGame HasFuel;
 
     public void Construct(Engine engine) => _engine = engine;
     
