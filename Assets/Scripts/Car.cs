@@ -7,7 +7,8 @@ public class Car : MonoBehaviour
     private Engine _engine;
     private Transform _transform;
     public delegate void EndGame();
-    public event EndGame HasFuel;
+    
+    public event EndGame EnergyEmptied;
 
     public void Construct(Engine engine) => _engine = engine;
     
@@ -23,6 +24,6 @@ public class Car : MonoBehaviour
             _transform.Translate(_engine.Speed * Time.deltaTime, 0, 0);
             yield return new WaitForFixedUpdate();
         }
-        HasFuel?.Invoke();
+        EnergyEmptied?.Invoke();
     }
 }

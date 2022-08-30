@@ -1,21 +1,22 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Controller : MonoBehaviour
 {
-    private bool _clickCheck = false;
+    [SerializeField] private UIManager _uiManager;
+    [Header("Factories")]
     [SerializeField] private Factory _gasCarFactory;
     [SerializeField] private Factory _electricalCarFactory;
     private Car _gasCar;
     private Car _electricalCar;
+    private bool _clickCheck = false;
     private int _count;
 
     private void Awake()
     {
         _gasCar = _gasCarFactory.Create();
         _electricalCar = _electricalCarFactory.Create();
-        _gasCar.HasFuel += EndGameWindow;
+        _gasCar.EnergyEmptied += OnEnergyEmptied;
+        _electricalCar.EnergyEmptied += OnEnergyEmptied;
     }
 
     private void Update()
@@ -28,12 +29,12 @@ public class Controller : MonoBehaviour
         }
     }
 
-    private void EndGameWindow()
+    private void OnEnergyEmptied()
     {
         _count++;
         if (_count >= 2)
         {
-            SceneManager.LoadScene("EndGame");
+            _uiManager.ShowGameEndScreen();
         }
     }
 }
