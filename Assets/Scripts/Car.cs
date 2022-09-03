@@ -6,9 +6,8 @@ public class Car : MonoBehaviour
 {
     private Engine _engine;
     private Transform _transform;
-    public delegate void EndGame();
     
-    public event EndGame EnergyEmptied;
+    public event Action EnergyEmptied;
 
     public void Construct(Engine engine) => _engine = engine;
     

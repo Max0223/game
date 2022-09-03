@@ -15,13 +15,18 @@ public class Controller : MonoBehaviour
     {
         _gasCar = _gasCarFactory.Create();
         _electricalCar = _electricalCarFactory.Create();
-        _gasCar.EnergyEmptied += OnEnergyEmptied;
-        _electricalCar.EnergyEmptied += OnEnergyEmptied;
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        if (_clickCheck == false && Input.GetKeyUp(KeyCode.Space))
+        _gasCar.EnergyEmptied += OnEnergyEmptied;
+        _electricalCar.EnergyEmptied += OnEnergyEmptied;
+        _uiManager.PlayButtonClicked += OnClick;
+    }
+
+    public void OnClick()
+    {
+        if (_clickCheck == false)
         {
             _clickCheck = true;
             StartCoroutine(_gasCar.Moving());
